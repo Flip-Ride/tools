@@ -2,7 +2,7 @@
 
 LOCALHOST_RUN_LOG_DIR=~/.localhost-run
 
-for f in $(ls $LOCALHOST_RUN_LOG_DIR/*.log); do
+for f in $(ls $LOCALHOST_RUN_LOG_DIR/*.log 2>/dev/null); do
     BASENAME=$(basename $f)
     KEY=${BASENAME%.log}
     PORT=$(cat $LOCALHOST_RUN_LOG_DIR/$KEY.port 2>/dev/null)
