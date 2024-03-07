@@ -1,5 +1,5 @@
 # Set your User Pool ID
-USER_POOL_ID="us-west-2_GE4DcWMin"
+USER_POOL_ID=$1
 
 aws cognito-idp list-users --user-pool-id $USER_POOL_ID > user_pool.json
 
